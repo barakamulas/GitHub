@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<br />
+<div class="container-fluid">
+  <div class="user-pic-name">
+    <div class="details">
+      <img src="{{ user.imagePath }}" alt="" />
+      <br />
+
+      <h4>{{ user.name }}</h4>
+    </div>
+
+  </div>
+
+  <app-user-repos [user]="user"></app-user-repos>
+</div>

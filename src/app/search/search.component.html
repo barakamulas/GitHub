@@ -1,0 +1,71 @@
+<app-search-form (passSearchTerm)="search($event)"></app-search-form>
+<br />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 users">
+      <h2>Users</h2>
+      <br />
+      <div *ngIf="usersLength == 0" class="users-not-foun">
+        <h3>No Users Have Been Found</h3>
+      </div>
+      <div class="row">
+        <div *ngFor="let user of users" class="col-md-6">
+          <div class="card" style="width: 18rem">
+            <img src="{{ user.imagePath }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ user.name }}</h5>
+
+              <button class="btn btn-info" (click)="goToUrl(user.id)">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 repos">
+      <h2>Repositories</h2>
+      <br />
+      <div *ngIf="reposLength == 0" class="users-not-foun">
+        <h3>No Repos Have Been Found</h3>
+      </div>
+      <div class="row">
+        <div *ngFor="let repo of repos" class="col-md-6">
+          <div class="card" style="width: 18rem">
+            <div class="card-header">
+              <h5 class="card-title">{{ repo.name }}</h5>
+            </div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">
+                <strong>Language: </strong> {{ repo.language }}
+              </h6>
+              <br />
+              <div class="repo-desc">
+                <p class="card-text">{{ repo.description }}</p>
+              </div>
+              <div class="links">
+                <a href="{{ repo.gitHubLink }}" class="btn btn-info"
+                  >Github Link</a
+                >
+                <a
+                  *ngIf="!repo.liveLink == ''"
+                  href="{{ repo.liveLink }}"
+                  class="btn btn-warning"
+                  >Live link</a
+                >
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <small
+                >Created
+                <strong>{{ repo.dateCreated | dateCount }}</strong>
+                ago</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

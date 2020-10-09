@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg dark-navbar">
+  <a class="navbar-brand" href="/home"
+    ><i class="fab fa-github-alt fa-3x"></i
+  ></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive='active'
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/search" routerLinkActive='active'>Search</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        id="term"
+        name="term"
+        [(ngModel)]="searchTerm"
+        #term="ngModel"
+      />
+      <button
+        class="btn btn-info my-2 my-sm-0"
+        type="submit"
+        (click)="submitSearch()"
+      >
+      <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
+</nav>

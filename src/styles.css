@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  background-color: #37485a;
+}
+
+.card {
+  min-height: 54vh;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 13px;
+}
+
+.user-pic-name img {
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-pic-name {
+  position: relative;
+  height: 40vh;
+}
+
+.details {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.details h4 {
+  text-align: center;
+  color: white;
+}
+
+.contrast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.repos .card-subtitle {
+  font-size: small;
+}
+
+.card-body {
+  position: relative;
+}
+
+.links {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.btn {
+  margin-right: 5px;
+}
+h2,
+h3 {
+  color: white;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.dark-navbar {
+  background-color: inherit;
+  color: white;
+  /* position: fixed;
+  z-index: 3; */
+}
+
+.navbar a {
+  color: white;
+}
+
+.fa-github-alt {
+  color: #338596;
+}
+
+.fa-search{
+  color: white;
+}
+
+.active {
+  background-color: #338596;
+  border-radius: 5px;
+  color: black;
+}
+
+.repo-desc{
+  height: 15vh;
+  overflow-y: auto;
+
+}
+
+
+
+.card-header{
+  height: 11vh;
+}
+
+.card-title{
+  font-size: 0.9em;
+}
